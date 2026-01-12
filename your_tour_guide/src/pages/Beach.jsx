@@ -1,18 +1,19 @@
-import places from "../api/place";
+import React from "react";
+import places from "../api/places";
 
 const Beach = () => {
-  const beaches = places.filter(p => p.category === "beach")
+  const data = places.filter(p => p.category === "beach");
 
   return (
-    <div>
-      {beaches.map(b => (
-        <div key={b.id}>
-          <img src={b.image} width="300" />
-          <h3>{b.name}</h3>
+    <div className="home-container">
+      {data.map(item => (
+        <div className="place-card" key={item.id}>
+          <img src={item.image} alt={item.name} />
+          <h3>{item.name}</h3>
         </div>
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default Beach
+export default Beach;

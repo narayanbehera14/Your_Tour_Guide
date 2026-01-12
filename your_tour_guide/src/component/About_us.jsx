@@ -2,8 +2,7 @@ import React from 'react'
 
 const AboutUs = () => {
   return (
-    <div>
-      <h1>Welcome to <strong>Mumbai Meri Jaan</strong></h1>
+  <div className="about-container">      <h1>Welcome to <strong>Mumbai Meri Jaan</strong></h1>
 
       <p>
         Discover the soul of Mumbai — the City of Dreams — through our platform designed especially for foreign travelers.

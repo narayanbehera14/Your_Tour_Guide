@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-const header = () => {
-  const handleSearch = (e) =>
+const Header = ({ onSearch }) => {
+  const [search, setSearch] = useState("")
+
+  const handleSearch = (e) => {
     e.preventDefault()
+    onSearch(search)
+  }
 
   return (
     <header>
@@ -17,13 +21,17 @@ const header = () => {
         <Link to="/signin">Sign in</Link>
 
         <form className='header-search' onSubmit={handleSearch}>
-          <input type='text' placeholder='search...'/>
+          <input
+            type='text'
+            placeholder='search...'
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
           <button type='submit'>Go</button>
         </form>
       </div>
     </header>
-   
   )
 }
 
-export default header
+export default Header
