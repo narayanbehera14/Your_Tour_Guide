@@ -17,6 +17,8 @@ const places = [
     name: "Juhu Beach",
     category: "beach",
     city: "Mumbai",
+    rating: 4.6,
+    description: "Popular beach known for sunsets and street food.",
     image: juhu
   },
   {
@@ -24,6 +26,8 @@ const places = [
     name: "Versova Beach",
     category: "beach",
     city: "Mumbai",
+    rating: 4.4,
+    description: "Cleaner and calmer beach with a local vibe.",
     image: versova
   },
   {
@@ -31,6 +35,8 @@ const places = [
     name: "Taj Hotel",
     category: "hotel",
     city: "Mumbai",
+    rating: 4.9,
+    description: "Iconic luxury hotel near Gateway of India.",
     image: taj
   },
   {
@@ -38,6 +44,8 @@ const places = [
     name: "Hyatt Hotel",
     category: "hotel",
     city: "Mumbai",
+    rating: 4.7,
+    description: "Premium stay with world-class hospitality.",
     image: Hyatt
   },
   {
@@ -45,6 +53,8 @@ const places = [
     name: "JW Marriott",
     category: "hotel",
     city: "Mumbai",
+    rating: 4.8,
+    description: "Beachside luxury hotel at Juhu.",
     image: jw
   },
   {
@@ -52,6 +62,8 @@ const places = [
     name: "Vadapav",
     category: "food",
     city: "Mumbai",
+    rating: 4.9,
+    description: "Mumbai’s most loved street food.",
     image: vadapav
   },
   {
@@ -59,6 +71,8 @@ const places = [
     name: "Pav Bhaji",
     category: "food",
     city: "Mumbai",
+    rating: 4.8,
+    description: "Rich buttery bhaji served with pav.",
     image: pav
   },
   {
@@ -66,6 +80,8 @@ const places = [
     name: "Poha",
     category: "food",
     city: "Mumbai",
+    rating: 4.5,
+    description: "Light and healthy breakfast dish.",
     image: poha
   },
   {
@@ -73,6 +89,8 @@ const places = [
     name: "Wankhede Stadium",
     category: "stadium",
     city: "Mumbai",
+    rating: 4.7,
+    description: "Historic cricket stadium of Mumbai.",
     image: wankhede
   },
   {
@@ -80,6 +98,8 @@ const places = [
     name: "DY Patil Stadium",
     category: "stadium",
     city: "Mumbai",
+    rating: 4.6,
+    description: "Modern stadium hosting big events.",
     image: dy
   },
   {
@@ -87,6 +107,8 @@ const places = [
     name: "Cricket Ground",
     category: "stadium",
     city: "Mumbai",
+    rating: 4.4,
+    description: "Local ground for cricket lovers.",
     image: cricket
   },
   {
@@ -94,6 +116,8 @@ const places = [
     name: "Aska Beach",
     category: "beach",
     city: "Odisha",
+    rating: 4.3,
+    description: "Peaceful beach away from city crowd.",
     image: Aska
   }
 ];

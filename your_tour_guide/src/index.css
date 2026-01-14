@@ -61,7 +61,6 @@ header:hover {
   transform: translateY(-2px);
 }
 
-/* Animated underline */
 .header-nav a::after {
   content: "";
   position: absolute;
@@ -123,14 +122,15 @@ header:hover {
 .home-container {
   padding: 40px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* ⬅ bigger cards */
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 30px;
 }
 
 .place-card {
+  position: relative;
   background-color: #fff;
   border-radius: 16px;
-  padding: 22px; /* ⬅ more inner space */
+  padding: 22px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
@@ -141,10 +141,12 @@ header:hover {
 
 .place-card img {
   width: 100%;
-  height: 220px; /* ⬅ taller image */
+  height: 220px;
   object-fit: cover;
   border-radius: 14px;
   margin-bottom: 16px;
+  z-index: 1;
+  position: relative;
 }
 
 .place-card img:hover {
@@ -153,17 +155,46 @@ header:hover {
 }
 
 .place-card h3 {
-  font-size: 22px; /* ⬅ bigger title */
+  font-size: 22px;
   margin-bottom: 10px;
   color: #0071c2;
 }
 
 .place-card p {
-  font-size: 16px; /* ⬅ better readability */
+  font-size: 16px;
   line-height: 1.6;
   color: #555;
 }
 
+/* =====================================================
+   CARD BADGES
+===================================================== */
+
+.card-badges {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.rating {
+  background: linear-gradient(135deg, #ffb703, #ff8800);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+.location {
+  background: rgba(255, 255, 255, 0.95);
+  color: #0071c2;
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
 
 /* =====================================================
    ABOUT US
@@ -190,7 +221,6 @@ header:hover {
   box-shadow: 0 35px 80px rgba(0, 113, 194, 0.35);
 }
 
-/* Decorative circles */
 .about-container::before,
 .about-container::after {
   content: "";
@@ -236,16 +266,16 @@ header:hover {
   gap: 10px;
 }
 
-.about-container h2:hover,
-.about-container h1:hover {
-  text-shadow: 0 0 10px rgba(0, 113, 194, 0.6);
-}
-
 .about-container h2::after {
   content: "";
   flex: 1;
   height: 2px;
   background: linear-gradient(90deg, #0071c2, transparent);
+}
+
+.about-container h1:hover,
+.about-container h2:hover {
+  text-shadow: 0 0 10px rgba(0, 113, 194, 0.6);
 }
 
 .about-container p {
@@ -258,7 +288,6 @@ header:hover {
   transform: translateX(6px);
 }
 
-/* Highlight block */
 .about-container p:nth-last-child(2) {
   background: linear-gradient(
     135deg,
