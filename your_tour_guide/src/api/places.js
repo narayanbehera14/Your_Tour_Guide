@@ -15,7 +15,7 @@ const places = [
   {
     id: 1,
     name: "Juhu Beach",
-    category: "beach",
+    category: "Beach",
     city: "Mumbai",
     rating: 4.6,
     description: "Popular beach known for sunsets and street food.",
@@ -24,7 +24,7 @@ const places = [
   {
     id: 2,
     name: "Versova Beach",
-    category: "beach",
+    category: "Beach",
     city: "Mumbai",
     rating: 4.4,
     description: "Cleaner and calmer beach with a local vibe.",
@@ -33,7 +33,7 @@ const places = [
   {
     id: 3,
     name: "Taj Hotel",
-    category: "hotel",
+    category: "Hotel",
     city: "Mumbai",
     rating: 4.9,
     description: "Iconic luxury hotel near Gateway of India.",
@@ -42,7 +42,7 @@ const places = [
   {
     id: 4,
     name: "Hyatt Hotel",
-    category: "hotel",
+    category: "Hotel",
     city: "Mumbai",
     rating: 4.7,
     description: "Premium stay with world-class hospitality.",
@@ -51,7 +51,7 @@ const places = [
   {
     id: 5,
     name: "JW Marriott",
-    category: "hotel",
+    category: "Hotel",
     city: "Mumbai",
     rating: 4.8,
     description: "Beachside luxury hotel at Juhu.",
@@ -60,7 +60,7 @@ const places = [
   {
     id: 6,
     name: "Vadapav",
-    category: "food",
+    category: "Food",
     city: "Mumbai",
     rating: 4.9,
     description: "Mumbai’s most loved street food.",
@@ -69,7 +69,7 @@ const places = [
   {
     id: 7,
     name: "Pav Bhaji",
-    category: "food",
+    category: "Food",
     city: "Mumbai",
     rating: 4.8,
     description: "Rich buttery bhaji served with pav.",
@@ -78,7 +78,7 @@ const places = [
   {
     id: 8,
     name: "Poha",
-    category: "food",
+    category: "Food",
     city: "Mumbai",
     rating: 4.5,
     description: "Light and healthy breakfast dish.",
@@ -87,7 +87,7 @@ const places = [
   {
     id: 9,
     name: "Wankhede Stadium",
-    category: "stadium",
+    category: "Stadium",
     city: "Mumbai",
     rating: 4.7,
     description: "Historic cricket stadium of Mumbai.",
@@ -96,7 +96,7 @@ const places = [
   {
     id: 10,
     name: "DY Patil Stadium",
-    category: "stadium",
+    category: "Stadium",
     city: "Mumbai",
     rating: 4.6,
     description: "Modern stadium hosting big events.",
@@ -105,7 +105,7 @@ const places = [
   {
     id: 11,
     name: "Cricket Ground",
-    category: "stadium",
+    category: "Stadium",
     city: "Mumbai",
     rating: 4.4,
     description: "Local ground for cricket lovers.",
@@ -114,7 +114,7 @@ const places = [
   {
     id: 12,
     name: "Aska Beach",
-    category: "beach",
+    category: "Beach",
     city: "Odisha",
     rating: 4.3,
     description: "Peaceful beach away from city crowd.",

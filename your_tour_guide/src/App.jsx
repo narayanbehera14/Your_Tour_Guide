@@ -1,19 +1,31 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import { useState } from "react";
 import Header from "./component/Header";
 import AboutUs from "./component/About_us";
 import Footer from "./component/Footer";
 import places from "./api/places";
+import PlaceDetail from "./component/PlaceDetail";
 import "./index.css";
+import SignIn from "./pages/SignIn";
 
 export default function App() {
   const [searchQuery, setSearchQuery] = useState("");
+  const [activeCategory, setActiveCategory] = useState("all");
 
-  const filteredPlaces = places.filter(place =>
-    place.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    place.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    place.city.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  const normalize = (str) => str.replace(/\s+/g, "").toLowerCase();
+
+  const filteredPlaces = places.filter((place) => {
+    const categoryMatch =
+      activeCategory.toLowerCase() === "all" ||
+      place.category.toLowerCase() === activeCategory.toLowerCase();
+
+    const searchMatch =
+      normalize(place.name).includes(normalize(searchQuery)) ||
+      normalize(place.city).includes(normalize(searchQuery)) ||
+      normalize(place.category).includes(normalize(searchQuery));
+
+    return categoryMatch && searchMatch;
+  });
 
   return (
     <>
@@ -23,28 +35,69 @@ export default function App() {
         <Route
           path="/"
           element={
-            <div className="home-container">
-              {filteredPlaces.map(place => (
-                <div className="place-card" key={place.id}>
+            <>
+              {/* CATEGORY BUTTONS */}
+              <div className="category-bar">
+                {["all", "Hotel", "Food", "Beach"].map((cat) => (
+                  <button
+                    key={cat}
+                    className={`category-btn ${
+                      activeCategory.toLowerCase() === cat.toLowerCase()
+                        ? "active"
+                        : ""
+                    }`}
+                    onClick={() => setActiveCategory(cat)}
+                  >
+                    {cat.toUpperCase()}
+                  </button>
+                ))}
+              </div>
 
-                  <div className="card-badges">
-                    <span className="rating">⭐ {place.rating}</span>
-                    <span className="location">📍 {place.city}</span>
-                  </div>
+              {/* PLACE CARDS */}
+              <div className="home-container">
+                {filteredPlaces.length > 0 ? (
+                  filteredPlaces.map((place) => (
+                    <Link
+                      to={`/place/${place.id}`}
+                      key={place.id}
+                      className="card-link"
+                    >
+                      <div className="place-card">
+                        <div className="card-badges">
+                          <span className="rating">⭐ {place.rating}</span>
+                        </div>
 
-                  <img src={place.image} alt={place.name} />
+                        <img src={place.image} alt={place.name} />
 
-                  <h3>{place.name}</h3>
-                  <p>{place.category} • {place.city}</p>
-
-                </div>
-              ))}
-            </div>
+                        <div className="card-info">
+                          <h3>{place.name}</h3>
+                          <span className="location-right">📍 Location</span>
+                        </div>
+                      </div>
+                    </Link>
+                  ))
+                ) : (
+                  <p
+                    style={{
+                      textAlign: "center",
+                      marginTop: "50px",
+                      fontSize: "18px",
+                      color: "#555",
+                    }}
+                  >
+                    No places found
+                  </p>
+                )}
+              </div>
+            </>
           }
         />
+        <Route path="/" element={<h1>Home</h1>} />
+
 
         <Route path="/about" element={<AboutUs />} />
-        <Route path="/signin" element={<h1>Sign In</h1>} />
+        <Route path="/place/:id" element={<PlaceDetail />} />
+        <Route path="/signin" element={<SignIn />} />
       </Routes>
 
       <Footer />
