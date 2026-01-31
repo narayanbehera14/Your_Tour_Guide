@@ -28,6 +28,13 @@ import bhel from "../assets/bhel.jpg";
 import paniPuri from "../assets/pani_puri.jpg";
 import biryani from "../assets/biryani.png";
 
+import csmvs from "../assets/csmvs.jpg";
+import nehru from "../assets/nehru_science.jpg";
+import rbi from "../assets/rbi_museum.jpg";
+import bhau from "../assets/bhau_daji.jpg";
+import drbhau from "../assets/dr_bhau.jpg";
+
+
 const places = [
   {
     id: 1,
@@ -256,7 +263,53 @@ const places = [
     rating: 4.4,
     description: "Local ground for cricket lovers.",
     image: cricket
+  },
+    {
+    id: 26,
+    name: "Chhatrapati Shivaji Maharaj Vastu Sangrahalaya",
+    category: "museum",
+    city: "Mumbai",
+    rating: 4.8,
+    description: "Mumbai’s most famous museum with art and history collections.",
+    image: csmvs
+  },
+  {
+    id: 27,
+    name: "Nehru Science Centre",
+    category: "museum",
+    city: "Mumbai",
+    rating: 4.6,
+    description: "Interactive science museum for all age groups.",
+    image: nehru
+  },
+  {
+    id: 28,
+    name: "RBI Monetary Museum",
+    category: "museum",
+    city: "Mumbai",
+    rating: 4.5,
+    description: "Museum showcasing India’s financial and banking history.",
+    image: rbi
+  },
+  {
+    id: 29,
+    name: "Bhau Daji Lad Museum",
+    category: "museum",
+    city: "Mumbai",
+    rating: 4.7,
+    description: "Mumbai’s oldest museum focusing on culture and heritage.",
+    image: bhau
+  },
+  {
+    id: 30,
+    name: "Dr. Bhau Daji Lad City Museum",
+    category: "museum",
+    city: "Mumbai",
+    rating: 4.6,
+    description: "Decorative arts and city history museum.",
+    image: drbhau
   }
+
 ];
 
 export default places;

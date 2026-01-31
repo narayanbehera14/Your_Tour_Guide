@@ -38,7 +38,7 @@ export default function App() {
             <>
               {/* CATEGORY BUTTONS */}
               <div className="category-bar">
-                {["all", "Hotel", "Food", "Beach"].map((cat) => (
+                {["all", "Hotel", "Food", "Beach", "Museum"].map((cat) => (
                   <button
                     key={cat}
                     className={`category-btn ${
@@ -57,24 +57,38 @@ export default function App() {
               <div className="home-container">
                 {filteredPlaces.length > 0 ? (
                   filteredPlaces.map((place) => (
-                    <Link
-                      to={`/place/${place.id}`}
-                      key={place.id}
-                      className="card-link"
-                    >
-                      <div className="place-card">
-                        <div className="card-badges">
-                          <span className="rating">⭐ {place.rating}</span>
-                        </div>
+          <Link
+  to={`/place/${place.id}`}
+  key={place.id}
+  className="card-link"
+>
+  <div className="place-card">
+    <div className="card-badges">
+      <span className="rating">⭐ {place.rating}</span>
+    </div>
 
-                        <img src={place.image} alt={place.name} />
+    <img src={place.image} alt={place.name} />
 
-                        <div className="card-info">
-                          <h3>{place.name}</h3>
-                          <span className="location-right">📍 Location</span>
-                        </div>
-                      </div>
-                    </Link>
+    <div className="card-info">
+      <h3>{place.name}</h3>
+
+      <button
+        className="location-right"
+        onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          window.open(
+            `https://www.google.com/maps/search/?api=1&query=${place.name} ${place.city}`,
+            "_blank"
+          );
+        }}
+      >
+        📍 Location
+      </button>
+    </div>
+  </div>
+</Link>
+
                   ))
                 ) : (
                   <p

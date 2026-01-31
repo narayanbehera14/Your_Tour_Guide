@@ -215,9 +215,9 @@ header:hover {
 
 .card-info {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-top: 6px;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 
@@ -227,20 +227,14 @@ header:hover {
   margin: 0;
 }
 .location-right {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-
-  font-family: "Inter", "Segoe UI", sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  color: #333;
-
-  padding: 4px 10px;
-  border: 1px solid #d0d7de;
-  border-radius: 16px;
-  background-color: transparent;
-  cursor: default;
+  background: #fff;
+  border: 1px solid #d0d7ff;
+  color: #141515;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  white-space: nowrap;
 }
 
 .location-right:hover {
