@@ -1,5 +1,5 @@
 import juhu from "../assets/juhu.jpg";
-import taj from "../assets/taj hotel.jpg";
+import taj from "../assets/taj-hotel.jpg"
 import vadapav from "../assets/vadpav.jpg";
 import wankhede from "../assets/wankhede stadium.jpg";
 import Aska from "../assets/Aska.jpg";

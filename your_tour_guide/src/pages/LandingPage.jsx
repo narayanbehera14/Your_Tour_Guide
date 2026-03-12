@@ -4,7 +4,7 @@ import { FaMapMarkerAlt, FaStar, FaClock, FaHeart, FaCompass } from 'react-icons
 import hero from "../assets/240_F_320061630_qTwTYsIEPJO62ubp5bzF41Pob4oJug5b.jpg";
 import marineDrive from "../assets/marine_drive.jpg";
 import juhu from "../assets/juhu.jpg";
-import taj from "../assets/Taj hotel.jpg";
+import taj from "../assets/taj-hotel.jpg"
 import trident from "../assets/trident.jpg";
 
 export default function LandingPage() {
