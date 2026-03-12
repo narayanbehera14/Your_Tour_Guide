@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import LandingPage from "../pages/LandingPage";
 import Home from "../pages/Home";
-import AboutUs from "../component/About_us";
-import PlaceDetail from "../component/PlaceDetail";
+import AboutUs from "../components/About_us";
+import PlaceDetail from "../components/PlaceDetail";
 import SignIn from "../pages/SignIn";
 import SignUp from "../pages/SignUp";
 
