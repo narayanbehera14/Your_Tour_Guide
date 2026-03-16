@@ -20,7 +20,6 @@ import leela from "../assets/leela.jpg";
 import alibaug from "../assets/alibaug.jpg";
 import girgaon from "../assets/girgaon.jpg";
 import madh from "../assets/madh.jpg";
-import marine from "../assets/marine_drive.jpg";
 
 import dosa from "../assets/dosa.png";
 import misal from "../assets/misal.jpg";

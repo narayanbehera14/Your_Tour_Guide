@@ -67,14 +67,6 @@ export default function Home() {
     return locationMatch && categoryMatch && searchMatch;
   });
 
-  const handleLocationChange = (location, checked) => {
-    if (checked) {
-      setSelectedLocations([...selectedLocations, location]);
-    } else {
-      setSelectedLocations(selectedLocations.filter((loc) => loc !== location));
-    }
-  };
-
   const handleCategoryChange = (category, checked) => {
     if (checked) {
       setSelectedCategories([...selectedCategories, category]);

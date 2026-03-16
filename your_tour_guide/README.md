@@ -1,16 +1,78 @@
-# React + Vite
+# YourTourGuide
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React-based tour guide application designed to help users explore Mumbai with confidence. Discover hand-picked hotels, local eateries, iconic beaches, museums, and more with insider tips, ratings, and easy navigation.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Explore Mumbai**: Browse curated lists of places including beaches, hotels, restaurants, museums, stadiums, and resorts
+- **Search & Filter**: Find places by location (Mumbai, Chennai, Delhi, Jaipur, Pune) and category
+- **Detailed Information**: View ratings, descriptions, and images for each place
+- **User Authentication**: Sign in and sign up functionality
+- **Responsive Design**: Optimized for desktop and mobile devices
+- **Fast Performance**: Built with Vite for lightning-fast development and builds
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend**: React 18
+- **Routing**: React Router DOM
+- **Styling**: Tailwind CSS
+- **Icons**: React Icons
+- **HTTP Client**: Axios
+- **Build Tool**: Vite
+- **Linting**: ESLint
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/your-tour-guide.git
+   cd your-tour-guide
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+## Available Scripts
+
+- `npm run dev` - Start the development server
+- `npm run build` - Build the project for production
+- `npm run preview` - Preview the production build locally
+- `npm run lint` - Run ESLint for code linting
+
+## Project Structure
+
+```
+src/
+├── api/
+│   └── places.js          # Static data for places
+├── assets/                # Images and media files
+├── components/
+│   ├── About_us.jsx       # About us component
+│   ├── Footer.jsx         # Footer component
+│   ├── Header.jsx         # Header component
+│   └── PlaceDetail.jsx    # Detailed view for places
+├── pages/
+│   ├── Home.jsx           # Main exploration page
+│   ├── LandingPage.jsx    # Hero/landing page
+│   ├── SignIn.jsx         # Sign in page
+│   └── SignUp.jsx         # Sign up page
+└── routes/
+    └── AppRoutes.jsx      # Application routing
+```
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is private and not licensed for public use.
