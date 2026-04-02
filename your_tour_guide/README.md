@@ -7,24 +7,19 @@ A full-stack web application designed as a comprehensive tour guide for traveler
 Here are some screenshots of the YourTourGuide application:
 
 ### Landing Page
-![Landing Page](screenshots/landing.png)
-*The hero section introducing the app and its features.*
+![Landing Page](./your_tour_guide/screenshots/landing.png)
 
 ### Home Page
-![Home Page](screenshots/home.png)
-*The main exploration page with place listings and filters.*
+![Home Page](./your_tour_guide/screenshots/home.png)
 
 ### Place Detail View
-![Place Detail](screenshots/detail.png)
-*Detailed view of a selected place, including ratings and description.*
+![Place Detail](./your_tour_guide/screenshots/detail.png)
 
 ### Sign-In Page
-![Sign-In](screenshots/signin.png)
-*User authentication page for signing in.*
+![Sign-In](./your_tour_guide/screenshots/signin.png)
 
 ### Mobile View
-![Mobile View](screenshots/mobile.png)
-*Responsive design optimized for mobile devices.*
+![Mobile View](./your_tour_guide/screenshots/mobile.png)
 
 *Note: Screenshots are stored in the `screenshots/` folder. To add or update images, take screenshots of your running app (e.g., using browser dev tools or screenshot tools), save them as PNG/JPG in this folder, and ensure the paths in the markdown above match the filenames.*
 
