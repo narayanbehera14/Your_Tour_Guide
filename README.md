@@ -6,25 +6,22 @@ A full-stack web application designed as a comprehensive tour guide for traveler
 
 Here are some screenshots of the YourTourGuide application:
 
+### Screenshots
+
 ### Landing Page
-![Landing Page](c:\Users\nbehe\AppData\Local\Packages\MicrosoftWindows.Client.Core_cw5n1h2txyewy\TempState\ScreenClip\{6D98376C-DAD2-4088-9CC9-D9979786AA2B}.png)
-*The hero section introducing the app and its features.*
+![Landing Page](./your_tour_guide/screenshots/landing.png)
 
 ### Home Page
-![Home Page](c:\Users\nbehe\AppData\Local\Packages\MicrosoftWindows.Client.Core_cw5n1h2txyewy\TempState\ScreenClip\{0ACE1663-2077-4684-9CEF-E38539DE400D}.png)
-*The main exploration page with place listings and filters.*
+![Home Page](./your_tour_guide/screenshots/home.png)
 
 ### Place Detail View
-![Place Detail](c:\Users\nbehe\AppData\Local\Packages\MicrosoftWindows.Client.Core_cw5n1h2txyewy\TempState\ScreenClip\{37F7789A-E6E3-47E9-9E61-F2536975B406}.png)
-*Detailed view of a selected place, including ratings and description.*
+![Place Detail](./your_tour_guide/screenshots/detail.png)
 
 ### Sign-In Page
-![Sign-In](c:\Users\nbehe\AppData\Local\Packages\MicrosoftWindows.Client.Core_cw5n1h2txyewy\TempState\ScreenClip\{09C40E58-D572-4AAD-BD47-68E3F6377EE6}.png)
-*User authentication page for signing in.*
+![Sign-In](./your_tour_guide/screenshots/signin.png)
 
 ### Mobile View
-![Mobile View](c:\Users\nbehe\AppData\Local\Packages\MicrosoftWindows.Client.Core_cw5n1h2txyewy\TempState\ScreenClip\{9E35B5EE-29DB-4175-8187-FC6CC1A932CB}.png)
-*Responsive design optimized for mobile devices.*
+![Mobile View](./your_tour_guide/screenshots/mobile.png)
 
 *Note: Screenshots are stored in the `screenshots/` folder. To add or update images, take screenshots of your running app (e.g., using browser dev tools or screenshot tools), save them as PNG/JPG in this folder, and ensure the paths in the markdown above match the filenames.*
 
