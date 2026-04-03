@@ -31,6 +31,7 @@ export default function Home() {
   const [selectedLocations, setSelectedLocations] = useState([]);
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [expandedLocation, setExpandedLocation] = useState(null);
+  const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
 
   const locations = ["Mumbai", "Chennai", "Delhi", "Jaipur", "Pune"];
 
@@ -80,12 +81,32 @@ export default function Home() {
   };
 
   return (
-    <div className="flex bg-gray-50">
+    <div className="flex flex-col sm:flex-row bg-gray-50">
+      {/* mobile filter toggle */}
+      <div className="sm:hidden p-4">
+        <button
+          onClick={() => setIsMobileFilterOpen(!isMobileFilterOpen)}
+          className="w-full bg-[#9e2a2b] text-white py-3 rounded-lg font-semibold shadow-md hover:bg-[#7a2021] transition-colors"
+        >
+          {isMobileFilterOpen ? "Hide Filters" : "Show Filters"}
+        </button>
+      </div>
+
       {/* sidebar */}
-      <aside className="sidebar w-1/5 p-6 bg-white shadow-lg min-h-screen sticky top-0 overflow-auto border-r border-gray-100">
-        <h2 className="text-2xl font-bold mb-6 text-[#9e2a2b] flex items-center gap-2">
-          <FaMapMarkerAlt /> Filters
-        </h2>
+      <aside className={`sidebar w-full sm:w-1/5 p-6 bg-white shadow-lg min-h-screen sticky top-0 overflow-auto border-r border-gray-100 ${
+        isMobileFilterOpen ? "block" : "hidden sm:block"
+      }`}>
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-2xl font-bold text-[#9e2a2b] flex items-center gap-2">
+            <FaMapMarkerAlt /> Filters
+          </h2>
+          <button
+            onClick={() => setIsMobileFilterOpen(false)}
+            className="sm:hidden text-sm text-[#9e2a2b] font-semibold hover:underline"
+          >
+            Close
+          </button>
+        </div>
         <div className="space-y-3">
           {locations.map((loc) => (
             <div key={loc} className="">
@@ -130,6 +151,7 @@ export default function Home() {
             setSelectedCategories([]);
             setExpandedLocation(null);
             setSearchQuery("");
+            setIsMobileFilterOpen(false);
           }}
           className="mt-8 w-full bg-linear-to-r from-[#9e2a2b] to-[#c23541] text-white py-3 rounded-lg hover:from-[#7a2021] hover:to-[#a01a29] transition-all duration-200 font-semibold shadow-md hover:shadow-lg"
         >
@@ -138,7 +160,7 @@ export default function Home() {
       </aside>
 
       {/* main content */}
-      <main className="main w-3/4 p-8">
+      <main className="main w-full sm:w-3/4 p-4 sm:p-8">
         <div className="mb-8">
           <div className="relative">
             <AiOutlineSearch className="absolute top-1/2 left-4 transform -translate-y-1/2 text-gray-400 text-xl" />
